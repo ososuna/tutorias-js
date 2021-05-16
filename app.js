@@ -67,72 +67,67 @@ do {
 
 // Templates literales
 const nombre = 'Oswaldo';
-let edad = 19;
+const edad = 19;
 const accion = 'escuchar música';
+
 
 console.log( `Hola, mi nombre es ${ nombre }, tengo ${ edad } años y me gusta ${ accion }.` );
 
 // Operador ternario
-const restar = true;
+const restar = false;
 
-/*
 if ( restar ) {
     console.log( 'Restar es true' );
 } else {
     console.log( 'Restar es false' );
 }
-*/
 
-( restar ) ? /* true */ console.log( 'Restar es true' ) : /* false */ console.log( 'Restar es false' );
+( restar ) ? console.log( 'Restar es true' ) : console.log( 'Restar es false' );
 
 function parImparTernario( n ) {
-    
-    ( n%2 == 0 ) ? console.log( `${ n } es par` ) : console.log( `${ n } es impar` );
-
+    ( n%2==0 ) ? console.log( `${ n } es par` ) : console.log( `${ n } es impar` );
 }
 
+parImparTernario( 12 );
 
-const parImparTernarioFlecha = ( n ) => {
-    
-    ( n%2 == 0 ) ? console.log( `${ n } es par` ) : console.log( `${ n } es impar` );
-
-}
-
-parImparTernario( 200 );
-parImparTernarioFlecha( 15 );
 
 // Arreglos
 const arr1 = new Array(1, 2, 3, 4);
 const arr2 = [1, 2, 3, 4];
+
 // console.log( arr1.length );
-// console.log( arr2[0] );
+// console.log( arr2[3] );
 
 // Recorrer un arreglo
 for (let i = 0; i < arr1.length; i++) {
     // console.log( arr1[i] );
 }
 
-arr2.forEach( n => {
-    // console.log( n );
+arr2.forEach( i => {
+    console.log( i );
 });
+
 
 // Añadir un elemento al final de un arreglo
 const arr3 = [];
-arr3.push( 'Manzana' ); 
+arr3.push( 'Manzana' );
 arr3.push( true );
-arr3.push( 3.1416 );
+arr3.push( 3.1416 )
 
 // Añadir un elemento al inicio de un arreglo
-arr3.unshift( 0 );
+arr3.unshift( 1 );
 console.log( arr3 );
 
-// Objetos
+
+// Objetos JSON
 let animal = {
-    especie: "Perro",
-    nombre: "Chilaquil",
-    color: "Naranja",
+    especie: 'Perro',
+    nombre: 'Chilaquil',
+    color: 'Naranja',
     esMacho: true,
-    sonido: function() {
+    sonido: function () {
         console.log( `${ this.especie } puede ladrar.` );
     }
-};
+}
+
+animal.sonido();
